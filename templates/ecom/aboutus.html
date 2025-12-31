@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Ecommerce</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {% if request.user.is_authenticated %}
+    {% include "ecom/customer_navbar.html" %}
+  {% else %}
+    {% include "ecom/navbar.html" %}
+  {% endif %}
+
+  <div class="container mt-5 mb-5">
+    <h1 class="text-center mb-4">About Ecommerce</h1>
+
+    <p class="mb-3" style="text-align:justify;">
+      Ecommerce is a cutting-edge online shopping platform designed to provide a seamless and enjoyable experience for customers. Our mission is to empower individuals to shop with confidence, offering a vast array of products at competitive prices, backed by exceptional customer service.
+    </p>
+
+    <h2 class="mt-4">Our Story</h2>
+    <p class="mb-3" style="text-align:justify;">
+      Ecommerce was founded by Naima and Nazia, two passionate and innovative developers who wanted to create a user-friendly and feature-rich ecommerce platform. With a focus on quality, customer service, and innovation, they have worked tirelessly to bring Ecommerce to life.
+    </p>
+
+    <h2 class="mt-4">Meet the Developers</h2>
+    <p class="mb-3" style="text-align:justify;">
+      Hi, we're Naima and Nazia, the founders and developers of Ecommerce. As self-taught programmers, we've had the privilege of working on various projects, honing our skills in Python, Django, and other technologies. We're passionate about sharing our knowledge and contributing to the open-source community.
+    </p>
+
+    <h2 class="mt-4">Why Choose Ecommerce?</h2>
+    <ul class="mb-3">
+      <li>Wide range of products to choose from</li>
+      <li>Competitive pricing and offers</li>
+      <li>Fast and secure shipping</li>
+      <li>Excellent customer service</li>
+      <li>Easy returns and refunds</li>
+    </ul>
+
+    <h2 class="mt-4">Get in Touch</h2>
+    <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
+    <p>Email: <a href="mailto:naimaandnazia@example.com">naimaandnazia@example.com</a></p>
+    <p>Follow us on social media:</p>
+    <ul>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </div>
+
+  {% include "ecom/footer.html" %}
+</body>
+</html>
